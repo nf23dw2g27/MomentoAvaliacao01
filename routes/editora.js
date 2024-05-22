@@ -33,7 +33,7 @@ editoraRouter.get("/:editoraId", async (req, res) => {
      if (foundeditora) {
        res.json(foundeditora);
      } else {
-       res.status(404).json({ error: "editora not found" });
+       res.status(404).json({ error: "Editora não encontrada" });
      }
    } catch (err) {
      res.status(500).json({ error: err.message });
@@ -50,7 +50,7 @@ editoraRouter.put("/:editoraId",  authenticate, async (req, res) => {
        const updatededitora = await editora.findByPk(req.params.editoraId);
        res.json(updatededitora);
     } else {
-       res.status(404).json({ error: "editora not found" });
+       res.status(404).json({ error: "Editora não encontrada" });
     }
    } catch (err) {
     res.status(500).json({ error: err.message });
@@ -64,9 +64,9 @@ editoraRouter.delete("/:editoraId", authenticate, async (req, res) => {
        where: { editoraId: req.params.editoraId },
     });
     if (deleted) {
-      res.status(204).send("editora deleted");
+      res.status(204).send("Editora apagada");
     } else {
-      res.status(404).json({ error: "editora not found" });
+      res.status(404).json({ error: "Editora não encontrada" });
     }
     } catch (err) {
     res.status(500).json({ error: err.message });

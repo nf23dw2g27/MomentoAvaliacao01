@@ -6,7 +6,7 @@ const secretKey = process.env.JWT_SECRET || "chave";
 const authenticate = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
-    return res.status(401).json({ message: 'Access denied' });
+    return res.status(401).json({ message: 'Accesso negado' });
   }
 
   try {
@@ -15,7 +15,7 @@ const authenticate = (req, res, next) => {
     req.user = decoded;
     next();
   } catch (error) {
-    res.status(401).json({ message: 'Invalid token' });
+    res.status(401).json({ message: 'Token invalido' });
   }
 };
 

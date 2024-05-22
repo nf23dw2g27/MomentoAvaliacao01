@@ -16,7 +16,7 @@ exports.register = async (req, res) => {
       firstName,
       lastName,
     });
-    res.status(201).json({ message: 'User created successfully' });
+    res.status(201).json({ message: 'Utilizador criado com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -27,7 +27,7 @@ exports.login = async (req, res) => {
     const { username, password } = req.body;
     const user = await db.user.findOne({ where: { username } });
     if (!user || !(await bcrypt.compare(password, user.password))) {
-      return res.status(401).json({ message: 'Invalid credentials' });
+      return res.status(401).json({ message: 'Credenciais invalidas' });
     }
     const token = jwt.sign({ userId: user.id }, secretKey, { expiresIn: '1h' }); //
     res.json({ token });

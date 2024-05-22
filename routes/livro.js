@@ -32,7 +32,7 @@ livroRouter.get("/", async (req, res) => {
       if (foundLivro) {
         res.json(foundLivro);
       } else {
-        res.status(404).json({ error: "Livro not found" });
+        res.status(404).json({ error: "Livro não encontrado" });
       }
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -49,7 +49,7 @@ livroRouter.get("/", async (req, res) => {
         const updatedLivro = await livro.findByPk(req.params.livroId);
         res.json(updatedLivro);
       } else {
-        res.status(404).json({ error: "Livro not found" });
+        res.status(404).json({ error: "Livro não encontrado" });
       }
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -64,9 +64,9 @@ livroRouter.get("/", async (req, res) => {
       });
       console.log("AQUI APAGOU", deleted);
       if (deleted == 1 ) {
-        res.status(200).send("Livro deleted");
+        res.status(200).send("Livro apagado");
       } else {
-        res.status(404).json({ error: "Livro not found" });
+        res.status(404).json({ error: "Livro não encontrado" });
       }
     } catch (err) {
       res.status(500).json({ error: err.message });

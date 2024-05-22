@@ -34,7 +34,7 @@ autorRouter.get("/:autorId", async (req, res) => {
      if (foundAutor) {
        res.json(foundAutor);
      } else {
-       res.status(404).json({ error: "Autor not found" });
+       res.status(404).json({ error: "Autor/a não encontrado/a" });
      }
    } catch (err) {
      res.status(500).json({ error: err.message });
@@ -51,7 +51,7 @@ autorRouter.put("/:autorId",authenticate, async (req, res) => {
        const updatedAutor = await autor.findByPk(req.params.autorId);
        res.json(updatedAutor);
     } else {
-       res.status(404).json({ error: "Autor not found" });
+       res.status(404).json({ error: "Autor/a não encontrado/a" });
     }
    } catch (err) {
     res.status(500).json({ error: err.message });
@@ -65,9 +65,9 @@ autorRouter.delete("/:autorId", authenticate, async (req, res) => {
        where: { autorId: req.params.autorId },
     });
     if (deleted) {
-      res.status(204).send("Autor deleted");
+      res.status(204).send("Autor/a apagada");
     } else {
-      res.status(404).json({ error: "Autor not found" });
+      res.status(404).json({ error: "Autor/a não encontrado/a" });
     }
     } catch (err) {
     res.status(500).json({ error: err.message });
