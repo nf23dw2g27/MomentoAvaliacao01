@@ -1,0 +1,423 @@
+openapi: 3.0.0
+info:
+  title: Livraria Online - Umaia
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /auth/login:
+    post:
+      summary: login user para obter token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/login'
+      responses:
+        '201':
+          description: Login com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/loginResponse'
+        '500':
+          description: Erro no servidor
+
+
+  /livro:
+    post:
+      summary: Criar um novo livro
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Livro'
+      responses:
+        '201':
+          description: Livro criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LivroInput'
+        '500':
+          description: Erro no servidor
+    get:
+      summary: Obter todos os livros
+      responses:
+        '200':
+          description: Lista de livros obtida com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LivroInput'
+        '500':
+          description: Erro no servidor
+  /livro/{livroId}:
+    get:
+      summary: Obter livro por ID
+      parameters:
+        - in: path
+          name: livroId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID do livro a ser obtido
+      responses:
+        '200':
+          description: Livro encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LivroInput'
+        '404':
+          description: Livro não encontrado
+        '500':
+          description: Erro no servidor
+    put:
+      summary: Atualizar livro por ID
+      parameters:
+        - in: path
+          name: livroId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID do livro a ser atualizado
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Livro'
+      responses:
+        '200':
+          description: Livro atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LivroInput'
+        '404':
+          description: Livro não encontrado
+        '500':
+          description: Erro no servidor
+    delete:
+      summary: Excluir livro por ID
+      parameters:
+        - in: path
+          name: livroId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID do livro a ser excluído
+      responses:
+        '204':
+          description: Livro excluído com sucesso
+        '404':
+          description: Livro não encontrado
+        '500':
+          description: Erro no servidor
+
+  /autor:
+    post:
+      summary: Criar um novo autor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Autor'
+      responses:
+        '201':
+          description: Autor criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Autor'
+        '500':
+          description: Erro no servidor
+    get:
+      summary: Obter todos os autores
+      responses:
+        '200':
+          description: Lista de autores obtida com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AutorInput'
+        '500':
+          description: Erro no servidor
+  /autor/{autorId}:
+    get:
+      summary: Obter autor por ID
+      parameters:
+        - in: path
+          name: autorId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID do autor a ser obtido
+      responses:
+        '200':
+          description: Autor encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutorInput'
+        '404':
+          description: Autor não encontrado
+        '500':
+          description: Erro no servidor
+    put:
+      summary: Atualizar autor por ID
+      parameters:
+        - in: path
+          name: autorId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID do autor a ser atualizado
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Autor'
+      responses:
+        '200':
+          description: Autor atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutorInput'
+        '404':
+          description: Autor não encontrado
+        '500':
+          description: Erro no servidor
+    delete:
+      summary: Excluir autor por ID
+      parameters:
+        - in: path
+          name: autorId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID do autor a ser excluído
+      responses:
+        '204':
+          description: Autor excluído com sucesso
+        '404':
+          description: Autor não encontrado
+        '500':
+          description: Erro no servidor
+ 
+  /editora:
+    post:
+      summary: Criar uma nova editora
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Editora'
+      responses:
+        '201':
+          description: Editora criada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditoraInput'
+        '500':
+          description: Erro no servidor
+    get:
+      summary: Obter todas as editoras
+      responses:
+        '200':
+          description: Lista de editoras obtida com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EditoraInput'
+        '500':
+          description: Erro no servidor
+  /editora/{editoraId}:
+    get:
+      summary: Obter editora por ID
+      parameters:
+        - in: path
+          name: editoraId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID da editora a ser obtida
+      responses:
+        '200':
+          description: Editora encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditoraInput'
+        '404':
+          description: Editora não encontrada
+        '500':
+          description: Erro no servidor
+    put:
+      summary: Atualizar editora por ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: editoraId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID da editora a ser atualizada
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Editora'
+      responses:
+        '200':
+          description: Autor atualizado com sucesso
+    delete:
+      summary: Excluir Editora por ID
+      parameters:
+        - in: path
+          name: editoraId
+          required: true
+          schema:
+            type: integer
+            format: int64
+          description: ID da editora a ser excluído
+      responses:
+        '204':
+          description: Editora excluído com sucesso
+        '404':
+          description: Editora não encontrado
+        '500':
+          description: Erro no servidor
+
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    login:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    loginResponse:
+      type: object
+      properties:
+        token:
+          type: string
+    Livro:
+      type: object
+      properties:
+        titulo:
+          type: string
+        autorId:
+          type: integer
+        editoraId:
+          type: integer
+        disponibilidade:
+          type: boolean
+        nPaginas:
+          type: integer
+        categoria:
+          type: string
+        sumario:
+          type: string
+      required:
+        - titulo
+        - autorId
+        - editoraId
+        - disponibilidade
+        - categoria  
+    LivroInput:
+      type: object
+      properties:
+        titulo:
+          type: string
+        autorId:
+          type: integer
+        editoraId:
+          type: integer
+        disponibilidade:
+          type: boolean
+        nPaginas:
+          type: integer
+        categoria:
+          type: string
+        sumario:
+          type: string
+      required:
+        - livroId
+        - titulo
+        - autorId
+        - editoraId
+        - disponibilidade
+        - categoria
+    EditoraInput:
+      type: object
+      properties:
+        nome:
+          type: string
+        morada:
+          type: string
+      required:
+        - editoraId
+        - nome
+        - morada
+    Editora:
+      type: object
+      properties:
+        nome:
+          type: string
+        sede:
+          type: string
+      required:
+        - nome
+        - morada
+    AutorInput:
+      type: object
+      properties:
+        nome:
+          type: string
+        pseudonimo:
+          type: string
+      required:
+        - autorId
+        - nome
+        - pseudonimo
+    Autor:
+      type: object
+      properties:
+        nome:
+          type: string
+        pseudonimo:
+          type: string
+      required:
+        - nome
+        - pseudonimo
