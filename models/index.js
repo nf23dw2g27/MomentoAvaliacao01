@@ -11,7 +11,7 @@ sequelize
     console.log("Conexão estabelecida com sucesso.");
   })
   .catch((error) => {
-    console.error("Não é possivel estabelecer conexão: ", error);
+    console.error("Não foi possivel estabelecer conexão: ", error);
   });
 
 const db = {};
@@ -41,15 +41,15 @@ const syncDatabase = async (retries = 5) => {
       try {
         await defineModels();
         await sequelize.sync();
-        console.log("Tabelas sync com susecesso!");
+        console.log("Tabelas sincronizadas com susecesso!");
       } catch (error) {
         if (retries) {
           console.log(
-            `Não foi possivel sync das tabelas. Tentando novamente em 5 segundos... Tentativas restantes: ${retries}`
+            `Não foi possivel a sincronização das tabelas. Voltaremos a tentar novamente em 5 segundos... Tentativas restantes: ${retries}`
           );
           setTimeout(syncDatabase, 5000, retries - 1);
         } else {
-          console.error("Não foi possivel sync das tabelas", error);
+          console.error("Não foi possivel a sincronização das tabelas", error);
         }
       }
     }
@@ -84,9 +84,9 @@ const syncDatabase = async (retries = 5) => {
       firstName: "teste",
       lastName: "MA",
     });
-    console.log("Users Criados!");
+    console.log("Utilizadores Criados!");
   } catch (error) {
-    console.error("Não foi possivel sync das tabelas", error);
+    console.error("Não foi possivel a sincronização das tabelas", error);
   }
 };
 
