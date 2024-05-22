@@ -62,8 +62,9 @@ livroRouter.get("/", async (req, res) => {
       const deleted = await livro.destroy({
         where: { livroId: req.params.livroId },
       });
-      if (deleted) {
-        res.status(204).send("Livro deleted");
+      console.log("AQUI APAGOU", deleted);
+      if (deleted == 1 ) {
+        res.status(200).send("Livro deleted");
       } else {
         res.status(404).json({ error: "Livro not found" });
       }

@@ -116,7 +116,7 @@ paths:
             format: int64
           description: ID do livro a ser excluído
       responses:
-        '204':
+        '200':
           description: Livro excluído com sucesso
         '404':
           description: Livro não encontrado
@@ -395,7 +395,7 @@ components:
       properties:
         nome:
           type: string
-        sede:
+        morada:
           type: string
       required:
         - nome

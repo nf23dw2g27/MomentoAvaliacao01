@@ -35,7 +35,7 @@ const syncDatabase = async (retries = 5) => {
       await defineModels();
       await db.sequelize.sync({ force: true });
 
-      // relacionamentos entre DB's
+      
       
     } else if (config.MODE === "PRODUCTION") {
       try {
@@ -53,6 +53,7 @@ const syncDatabase = async (retries = 5) => {
         }
       }
     }
+    // relacionamentos entre DB's
     db.livro.belongsTo(db.autor, { foreignKey: "autorId" });
     db.livro.belongsTo(db.editora, { foreignKey: "editoraId" });
     console.log("Tabelas criadas com susecesso!");
