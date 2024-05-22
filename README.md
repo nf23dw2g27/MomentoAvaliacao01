@@ -101,11 +101,11 @@ Report
 Please add at least on section (a file) per Chapter. But you can add more.
 Project presentation
 
-    Chapter 1: docs/ProjectPresentation.md
+    Chapter 1: https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/ProjectPresentation.md
 
 Resources
 
-    Chapter 2: docs/Resources.md
+    Chapter 2: https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md
 
 Product
 
