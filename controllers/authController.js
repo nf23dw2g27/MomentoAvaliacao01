@@ -4,6 +4,7 @@ const db = require("../models");
 // eslint-disable-next-line no-undef
 const secretKey = process.env.JWT_SECRET || 'chave'; // Use uma variável de ambiente para a chave secreta
 
+// Register function
 exports.register = async (req, res) => {
   try {
     const { username, password, email, telemovel, firstName, lastName } = req.body;
@@ -22,6 +23,7 @@ exports.register = async (req, res) => {
   }
 };
 
+// Login function
 exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;

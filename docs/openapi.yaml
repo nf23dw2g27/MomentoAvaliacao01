@@ -23,8 +23,8 @@ paths:
                 $ref: '#/components/schemas/loginResponse'
         '500':
           description: Erro no servidor
-
-
+       
+          
   /livro:
     post:
       summary: Criar um novo livro
@@ -315,7 +315,7 @@ paths:
 
 components:
   securitySchemes:
-    bearerAuth:            # arbitrary name for the security scheme
+    bearerAuth:            
       type: http
       scheme: bearer
       bearerFormat: JWT
