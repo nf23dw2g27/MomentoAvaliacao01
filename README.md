@@ -66,25 +66,34 @@ Project Structure
 
 ## Technologies
 
-* Javascript (https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript)
-* Express.js (https://expressjs.com/) - Framework web para Node.js utilizado para criar APIs RESTful e gerir rotas.
-* nodeJS (https://nodejs.org/en/) - Plataforma usada para construção de apps do lado do servidor.
-* JSON Web Tokens (JWT) (https://jwt.io/): Método de autenticação utilizado para criar tokens de acesso com informações do utilizador, permitindo a autenticação em APIs REST.
-* Basic Authentication: Método de autenticação HTTP usado para autenticar requests HTTP com base nas credenciais do utilizador (username e password) codificadas em Base64.
-* Yaml (https://yaml.org/) - Ferramenta para escrever dados estruturados de forma clara e legível.
-* MySQL Workbench (https://www.mysql.com/products/workbench/) - Sistema de gestão de base de dados relacional usado para armazenar e gerir dados dos recursos.
-* Postman (https://www.postman.com/) - Ferramenta utilizada para testar APIs RESTful durante o desenvolvimento, permitindo enviar solicitações HTTP e visualizar as respostas.
-* GitHub (https://github.com/)
-* Docker (https://www.docker.com/)
+* Javascript (https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript) a lightweight interpreted programming language with first-class functions. JavaScript allows you to implement complex features on web pages, making them interactive.
+
+* Express.js (https://expressjs.com/) - Framework web to Node.js used to create APIs RESTful and manage routes.
+
+* nodeJS (https://nodejs.org/en/) - Platform used for building server-side apps.
+
+* JSON Web Tokens (JWT) (https://jwt.io/) - Authentication method used to create access tokens with user information, enabling authentication to REST APIs.
+
+* Basic Authentication - HTTP authentication method used to authenticate HTTP requests based on the user's Base64-encoded credentials (username and password).
+
+* Yaml (https://yaml.org/) - Tool to write structured data in a clear and readable way.
+
+* MySQL Workbench (https://www.mysql.com/products/workbench/) - Relational database management system used to store and manage resource data.
+
+* Postman (https://www.postman.com/) - A tool used to test RESTful APIs during development, allowing you to send HTTP requests and view the responses.
+
+* GitHub (https://github.com/) - A platform that allows developers to create, store, manage, and share their code.
+
+* Docker (https://www.docker.com/) - Is an open-source platform that simplifies the development, deployment, and management of applications using containerization.
 
 
 ## Frameworks and Libraries
-* Express: Usado como o framework web para o servidor Node.js.
-* Bcrypt.js: Utilizado para realizar o hash e a comparação de paswords durante o processo de autenticação de utilizadores.
-* Dotenv: Usado para carregar variáveis de ambiente de um ficheiro .env.
-* Cors: Usado para habilitar o Cross-Origin Resource Sharing (CORS) e permitir pedidos de origens diferentes.
-* Body-parser: Usado para analisar os "body requests" HTTP.
-* Sequelize: Utilizado como ORM para interagir com a base de dados MySQL.
+* Express: Used as the web framework for the Node.js server.
+* Bcrypt.js: Used to hash and compare passwords during the user authentication process.
+* Dotenv: Used to load environment variables from an .env file.
+* Cors: Used to enable Cross-Origin Resource Sharing (CORS) and allow requests from different origins.
+* Body-parser: Used to parse HTTP body requests.
+* Sequelize: Used as an ORM to interact with the MySQL database.
 
 
 Report
@@ -92,11 +101,11 @@ Report
 Please add at least on section (a file) per Chapter. But you can add more.
 Project presentation
 
-    Chapter 1: Project presentation
+    Chapter 1: [Project Presentation] (docs/ProjectPresentation.md)
 
 Resources
 
-    Chapter 2: Resources
+    Chapter 2: [Resources](doc/Resources.md)
 
 Product
 
