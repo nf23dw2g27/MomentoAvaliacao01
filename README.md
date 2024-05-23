@@ -60,7 +60,7 @@ Project Structure
 
 ![imagem](https://github.com/Hugomorais1990/MomentoAvaliacao01/assets/82054101/98bc474b-1e6f-42e4-a9c6-f366afbd7818)
 
-![imagem](https://github.com/Hugomorais1990/MomentoAvaliacao01/assets/82054101/770cf10b-ec0b-4d1f-a198-eab187080022)
+![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/API%20schematic.png)
 
 ## Technologies
 
