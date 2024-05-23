@@ -106,7 +106,8 @@ Report
 Please add at least on section (a file) per Chapter. But you can add more.
 Project presentation
 
-    Chapter 1 [Project Presentation](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/ProjectPresentation.md).
+    Chapter 1 [Project Presentation](docs/ProjectPresentation.md).
+
 
 Resources
 
