@@ -4,25 +4,6 @@
 
 Repository to host the project developed for the Web Development II course, a second-year subject in the Computer Science degree program taught at the University of Maia. Developed by Group 27: Hugo Morais (a026533) and Diogo Sousa (A038560).
 
-## Run the System
-To create the project in a new system you need to run the following command:
-
-```bash
-docker compose build
-```
-
-Docker will pull the MySQL and Node.js images (if our machine does not have it before).
-
-The services can be run on the background with command:
-```bash
-docker compose up -d
-```
-after that to login in the API to test you can logging with the following username and password:
-```bash
-username:teste
-password:testepass
-```
-
 ## Short theme description
 
 The goal of this project is to create a web service for managing the availability of books. The system allows for the registration of books, authors, and publishers. 
@@ -58,6 +39,9 @@ Project Structure
 
 ## Gallery
 
+<details>
+<summary><b>Gallery</b></summary>
+
 ![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/API%20schematic.png)
 
 ![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman.png)
@@ -67,7 +51,7 @@ Project Structure
 ![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman%20-%20List%20books.jpg)
 
 ![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman%20-%20List%20the%20book%20with%20ID%204.jpg)
-
+</details>
 
 ## Technologies
 
@@ -100,30 +84,23 @@ Project Structure
 * Body-parser: Used to parse HTTP body requests.
 * Sequelize: Used as an ORM to interact with the MySQL database.
 
+## Project presentation
 
-Report
+Chapter 1 [Project Presentation](docs/ProjectPresentation.md).
 
-Please add at least on section (a file) per Chapter. But you can add more.
-Project presentation
+## Resources
 
-    Chapter 1 [Project Presentation](docs/ProjectPresentation.md).
+Chapter 2 : [Resources](docs/Resources.md)
 
+## Product
 
-Resources
+Chapter 3: [Product](docs/Product.md)
 
-    Chapter 2 :
-    
-    <a href="https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md">Resources</a>
+## Presentation
 
-Product
+Chapter 4: [Presentation](docs/Presentation.md)
 
-    Chapter 3: Product
-
-Presentation
-
-    Chapter 4: Presentation
-
-Team
+## Team
 
 > Hugo Morais <A026533@umaia.pt>
 
