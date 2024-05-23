@@ -58,9 +58,16 @@ Project Structure
 
 ## Gallery
 
-![imagem](https://github.com/Hugomorais1990/MomentoAvaliacao01/assets/82054101/98bc474b-1e6f-42e4-a9c6-f366afbd7818)
-
 ![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/API%20schematic.png)
+
+![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman.png)
+
+![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman%20-%20Create%20Book.jpg)
+
+![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman%20-%20List%20books.jpg)
+
+![imagem](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Images/Postman%20-%20List%20the%20book%20with%20ID%204.jpg)
+
 
 ## Technologies
 
@@ -103,7 +110,9 @@ Project presentation
 
 Resources
 
-    Chapter 2 [Resources](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md).
+    Chapter 2 :
+    
+    [Resources] (https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md)
 
 Product
 
@@ -115,6 +124,6 @@ Presentation
 
 Team
 
-> Hugo Morais [A026533@umaia.pt]
+> Hugo Morais <A026533@umaia.pt>
 
-> Diogo Sousa [A038560@umaia.pt]
+> Diogo Sousa <A038560@umaia.pt>
