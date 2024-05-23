@@ -101,11 +101,11 @@ Report
 Please add at least on section (a file) per Chapter. But you can add more.
 Project presentation
 
-    Chapter 1: [Project Presentation] (docs/ProjectPresentation.md)
+    Chapter 1 [Project Presentation](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/ProjectPresentation.md).
 
 Resources
 
-    Chapter 2: [Resources](doc/Resources.md)
+    Chapter 2 [Resources](https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md).
 
 Product
 
@@ -117,3 +117,6 @@ Presentation
 
 Team
 
+> Hugo Morais [A026533@umaia.pt]
+
+> Diogo Sousa [A038560@umaia.pt]
