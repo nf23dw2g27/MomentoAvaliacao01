@@ -112,7 +112,7 @@ Resources
 
     Chapter 2 :
     
-    [Resources] (https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md)
+    <a href="https://github.com/nf23dw2g27/MomentoAvaliacao01/blob/main/docs/Resources.md">Resources</a>
 
 Product
 
