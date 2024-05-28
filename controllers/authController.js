@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const db = require("../models");
+
 // eslint-disable-next-line no-undef
 const secretKey = process.env.JWT_SECRET || 'chave'; // Use uma variável de ambiente para a chave secreta
 
