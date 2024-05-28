@@ -5,25 +5,25 @@ const db = require("../models");
 const secretKey = process.env.JWT_SECRET || 'chave'; // Use uma variável de ambiente para a chave secreta
 
 // Register function
-exports.register = async (req, res) => {
-  try {
-    const { username, password, email, telemovel, firstName, lastName } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    await db.user.create({
-      username,
-      password: hashedPassword,
-      email,
-      telemovel,
-      firstName,
-      lastName,
-    });
-    res.status(201).json({ message: 'Utilizador criado com sucesso' });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
+// exports.register = async (req, res) => {
+//   try {
+//     const { username, password, email, telemovel, firstName, lastName } = req.body;
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     await db.user.create({
+//       username,
+//       password: hashedPassword,
+//       email,
+//       telemovel,
+//       firstName,
+//       lastName,
+//     });
+//     res.status(201).json({ message: 'Utilizador criado com sucesso' });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };
 
-// Login function
+// Função de Login
 exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;
